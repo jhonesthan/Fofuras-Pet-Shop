@@ -20,21 +20,26 @@
    * colors
    */
 
-  --bright-yellow-crayola: hsl(36, 94%, 57%);
-  --portland-orange: hsl(15, 84%, 57%);
+  --bright-yellow-crayola: rgb(254, 0, 0);
+  --portland-orange: rgb(24, 22, 124);
+  --portland-orange: hsl(2, 84%, 57%);
   --battleship-gray: hsl(0, 0%, 53%);
   --silver-chalice: hsl(0, 0%, 70%);
   --spanish-gray: hsl(0, 0%, 60%);
   --sonic-silver: hsl(208, 7%, 46%);
   --raisin-black: hsl(228, 6%, 17%);
-  --eerie-black: hsl(210, 3%, 13%);
-  --bittersweet: hsl(9, 96%, 69%);
+  --eerie-black: hsl(210, 7%, 6%);
+  --bittersweet: hsl(231, 91%, 43%);
   --light-gray: hsl(0, 0%, 80%);
   --platinum: hsl(0, 0%, 91%);
-  --amber: hsl(45, 100%, 51%);
+  --amber: rgb(24, 22, 124);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --onyx: hsl(220, 2%, 24%);
+
+  --main-color: rgb(254, 0, 0) ;
+  --text-color: rgb(24, 22, 124);
+  --bg-color: #fff;
 
   /**
    * typography
@@ -150,7 +155,7 @@ body {
 
 ::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
 
-::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
+::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 93%, 45%); }
 
 
 
@@ -172,7 +177,7 @@ body {
 
 .h1,
 .h2,
-.h3 { line-height: 1.1; }
+.h3 { line-height: 1.1;  }
 
 .h1 {
   color: var(--white);
@@ -484,7 +489,11 @@ body {
   gap: 2px;
 }
 
-.product-card .rating-wrapper.gray { color: unset; }
+/* .product-card .rating-wrapper.gray { color: unset; } */
+
+.star_half {
+  color: gr;
+}
 
 .product-card .h3 {
   --fs-3: 1.8rem;
@@ -512,6 +521,7 @@ body {
 .service .img {
   margin-inline: auto;
   margin-block-end: 30px;
+  border-radius: 50%;
 }
 
 .service .section-title { margin-block-end: 60px; }
@@ -544,9 +554,10 @@ body {
 .cta .section-title {
   text-align: left;
   margin-block: 10px 20px;
+  color: #fff;
 }
 
-.cta .section-text { margin-block-end: 30px; }
+.cta .section-text { margin-block-end: 30px; color: var(--bg-color); }
 
 .cta .btn:is(:hover, :focus) {
   background-color: var(--white);
@@ -591,7 +602,7 @@ body {
 }
 
 .footer-top {
-  padding-block-start: 100px;
+  padding-block-start: 90px;
   border-block-end: 1px solid var(--onyx);
 }
 
@@ -1109,10 +1120,11 @@ body {
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .logo {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
   }
+
 }
 
 @media (max-width: 340px) {
